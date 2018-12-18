@@ -104,8 +104,8 @@ for ll = 1:10
     nn_labels_test = digit2lable(nn_digits_test,unique(all_labels_test));
     nn_acc = sum(all_labels_test==nn_labels_test')/M_test;
     % SVM
-    t = templateSVM('KernelFunction','rbf');
-    Mdl = fitcecoc(fea_train,all_labels_train,'Learners',t,'Coding','onevsall');
+
+    Mdl = svmtrainn(all_labels_train,fea_train,'-t 2');
     save('param.mat','W3','W4','mu3','mu4','Mdl');
     svm_labels_test = predict(Mdl,fea_test);
     svm_acc = sum(all_labels_test==svm_labels_test)/M_test;

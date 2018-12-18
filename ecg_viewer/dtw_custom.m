@@ -1,7 +1,7 @@
-function dist_windom = dtw_cell(t,r,w)
+function dist_windom = dtw_custom(t,r,w)
 n = size(t,1);
 m = size(r,1);
-
+w = max(w,abs(n-m));%窗口,保证终点在对角线窗口之内
 %距离矩阵
 d = zeros(n,m);
 for i = 1:n

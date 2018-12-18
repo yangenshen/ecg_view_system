@@ -5,3 +5,6 @@ physionet incartdbA数据 signal 3 也就是导联2
 方法dtw_dba就是简单的在incartdba数据上用dtw和knn
 方法fast_shapelets:http://alumni.cs.ucr.edu/~rakthant/paper/13SDM_FastShapelets.pdf
 方法dwt_pca:https://www.sciencedirect.com/science/article/pii/S0169260715301097
+
+svmpredict 是libsvm编译好的svmp的redict方法
+直接运行exe 需要下载MCR_R2018a_win64_installer.exe
